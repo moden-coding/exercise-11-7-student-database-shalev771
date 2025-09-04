@@ -5,33 +5,7 @@ def add_student(database: dict, student: str):
 
 
 def print_student(database: dict, student: str):
-    default = "no completed courses" #default is zero, when student is added but no courses completed
-    
-    if student in database:
-        print(f"{student}:") # start by printing name
-
-        if database[student] == "":
-            database[student] = default
-            print(" " + str(database[student]))  #if no courses, assisnt with the default value and print
-
-        else:
-            if len(database[student]) > 0: #if more than one course, print amount of courses
-                average = 0
-                print(" " + str(len(database[student])) + " completed courses:") 
-
-                for key, value in database[student]: 
-                    print(f"  {key} {value}") # print course name and grade obtained
-                    average += value
-                if average > 0:
-                    average = average / len(database[student])
-                    print(" average grade", average) # print average grade for student
-            else:
-                print(" "+ default)
-
-    else:
-        print(f"{student}: no such person in the database") #if name not in database
-
-
+   pass
 
 def add_course(database: dict, student: str, course: tuple):
 
